@@ -7,12 +7,12 @@ function addInvocation(){
 		newIndex = maxIndex +1;
 	}
 	//Récupération et ajout du template
-	var template = $("#INVOCATION_TEMPLATE").html();
+	var template = getHtmlFromFile("./html/templates/invocation.panel.html");
 	template = template.split("INVOCATION_INDEX").join(newIndex+"");
 	var invocation_div = $("#invocation_div");
 	invocation_div.append(template);
 	//Récupération du div de menu
-	var templateMenu = $("#MENU_TEMPLATE").html();
+	var templateMenu = getHtmlFromFile("./html/templates/menu.element.html");
 	templateMenu = templateMenu.split("INVOCATION_INDEX").join(newIndex+"");
 	var menuDiv = $("#invocation_menu");
 	menuDiv.append(templateMenu);
@@ -58,7 +58,7 @@ function deleteInvocation(){
 	//Par contre, il faut vérifie le Menu
 	var menu = $("#invocation_menu");
 	if(menu.html().trim() == ""){
-		var template = $("#PLACEHOLDER_TEMPLATE").html();
+		var template = getHtmlFromFile("./html/templates/menu.placeholder.html");
 		menu.append(template);
 	}
 	monstre = null;
@@ -184,7 +184,7 @@ function adjustSize(){
 
 /* Gestion des instances d'invocations */
 function addInvocationData(){
-	var toAppend = $("#TEMPLATES_INVOCATION_DATA").html();
+	var toAppend =  getHtmlFromFile("./html/templates/invocation.instance.html");
 	$("#Invocation_"+selectedIndex+" .list_invocation_data").append(toAppend);
 	showList();
 }

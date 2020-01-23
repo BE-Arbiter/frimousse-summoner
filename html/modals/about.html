@@ -1,0 +1,71 @@
+<div id="aboutModal" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header modal-header-primary">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Calculatrice d'invocations V1.6</h4>
+			</div>
+			<div class="modal-body" style="overflow: auto;max-height:400px;">
+				<p>Par Arbiter - Ce logiciel est fourni tel-quel sans garantie aucune.</p>
+				<h4>Description</h4>
+				<p>
+					"Calculatrice Invocation" est une application simple écrite en HTML/CSS/JS, utilisant les framework jquery et bootstrap 3. Ces technologies ont été sélectionnées car elles permettaient un développement rapide de l'application et permettra à terme de la déployer ou je veux.<br><br>
+					Celle-ci sert à gérer les invocations de mon personnage "Frimousse l'invocateur" dans ma table de donjon 3.5, avec les dons, objets, capacités et alliés augmentant celles-ci il devenait très complexe de faire les calculs des pvs et des attaques. Entrainant une perte de temps et une certaine frustration de ma part.<br><br>
+					"Calculatrice Invocation" permet donc de gérer les stats des invocations et calcule automatiquement les buffs appliqués à celles-ci. De plus, elle permet de générer les commandes d'attaques pour Roll20.<br><br>
+				<h4>Instructions</h4>
+				<p>
+					Clic et regarde ce que ça fait... humm....bon...<br>
+					L'application est composé d'une listre d'invocations (Initialement vide) et des boutons "Ajouter", "Charger" et "Synchroniser".<br>
+					Le bouton "Ajouter" Crée une nouvelle invocation. Le bouton charger permet de charger un fichier JSON contenant une invocation préalablement sauvegardée sur disque. Le bouton synchroniser sauvegarde l'état actuel de la liste dans la mémoire du navigateur et celle-ci sera chargée lors du prochain démarrage de l'application.<br>
+					Pour sélectionner une invocation il suffit de cliquer sur son nom.<br><br>
+				</p>
+				<p>
+					Chaque invocation est composé d'un bloc de donnée, d'un bloc de buffs (bon, j'ai mis que ceux qui m'étaient utiles, j'avoue), et d'un paneau résultat.<br><br>
+				</p>
+				<p>
+					Le bloc de données à dans sont entête trois bouton: "Sauvegarder", "Supprimer" , "Afficher/Cacher le bloc de donnée"<br><br>
+					Il m'y est possible d'entrer les données suivantes :
+					<ul>
+						<li>nom</li>
+						<li>Type</li>
+						<li>Nombre de dés de vies</li>
+						<li>Valeur du dés de vie</li>
+						<li>Initiative</li>
+						<li>Force</li>
+						<li>Dextérité</li>
+						<li>Constitution</li>
+						<li>Intelligence</li>
+						<li>Sagesse</li>
+						<li>Charisme</li>
+						<li>Armure</li>
+						<li>Réflexe</li>
+						<li>Vigueur</li>
+						<li>Volonté</li>
+						<li>Sorts / Pouvoirs Magiques</li>
+						<li>Résistances / Immunité</li>
+						<li>Notes</li>
+						<li>4 attaques composées de : "Nom","Quantité","Bonus Toucher" (Nombre),"Dégats" (XDX+X), Critique, Multiplicateur et Notes</li>
+					</ul><br>
+				</p>
+				<p>
+					Le bloc de données de bufss me permet de sélectionner les buffs à appliquer au monstre:
+					<ul>
+						<li>Le don "Augment Summoning"</li>
+						<li>La capacité de classe "Deceptive Summon"</li>
+						<li>La capacité de classe "Minor School Esoterica"</li>
+						<li>La capacité de l'anneau de "Mighty Summon"</li>
+						<li>Un bonus Bardique au touché et aux dégats</li>
+						<li>Un bonus Bardique de dégats de feux (XD6)</li>
+						<li>Un bouton pour initier le calcul</li>
+					</ul><br>
+				</p>
+				<p>
+					Le bloc de résultats afficheras les données de l'invocation une fois les buffs appliqués. Il est important de noter la présence de boutons à cotés des attaques. Qui permettent de copier dans le presse papier un template roll20 de celle-ci.
+				</p>
+			</div> 	
+			<div class="modal-footer rightAlign">
+				<button class="btn btn-default" type="button" onclick="$('#aboutModal').modal('hide');">Heu... Merci?</button>
+			</div>
+		</div>
+	</div>
+</div>
