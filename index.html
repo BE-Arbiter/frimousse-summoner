@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculatrice d'invocations</title>
+		<link rel="icon" type="image/png" href="./img/favicon.png"/>
+		<!-- Jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- Bootstrap 3 -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="./css/main-style.css">
+	</head>
+	<body>
+		<div id="APPLICATION_PANEL" class="row" style="margin-top: 1em; margin-left: 0;margin-right: 0;"><div class="col-lg-10 col-lg-offset-1 col-md-12">
+			<div class="panel panel-primary ">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-md-11 col-sm-11 col-xs-10">
+							<h4>Calculatrice d'invocations</h4>
+						</div>
+						<div class="col-md-1 col-sm-1 col-xs-2 rightAlign" style="padding-right:2em;">
+							<h4>
+								<span class="pointer" onclick="$('#aboutModal').modal();">?</span>
+							</h4>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="row padding_row">
+						<div class="col-md-10 no_padding_col" style="margin-right:0;">
+							<ul id="invocation_menu" class="nav nav-tabs">
+								<li class="placeholder disabled"><a>Aucune invocation dans l'application</a></li> 
+							</ul>  
+						</div>
+						<div id="bouton_top" class="col-md-2 no_padding_col rightAlign" style="margin-left: 0;border-bottom:1px solid #ddd;height:42px">
+							<button class="btn btn-default" type="button" onclick="addInvocation()">
+								<span class="glyphicon glyphicon-file"/>
+							</button>
+							<button class="btn btn-default" type="button" onclick="$('#invocationLoader').click();">
+								<span class="glyphicon glyphicon glyphicon glyphicon-folder-open"/>
+							</button>
+							<button class="btn btn-default" type="button" onclick="synchroniseInvocations();">
+								<span class="glyphicon glyphicon glyphicon glyphicon-cloud-upload"/>
+							</button>
+							<input type="file" style="display:none" id="invocationLoader" onchange="loadInvocation(this)"/> 
+						</div>
+					</div>
+					
+					<div id="invocation_div">
+					</div>
+				</div>
+				<div class="panel-footer rightAlign">&copy;2020 Frimousse Corp. - All Right Reserved</div>
+			</div>
+		</div></div>
+		<!-- Modal About -->
+		<div id="include_about"></div>
+		<!-- Confirmation suppression -->
+		<div id="include_confirm_delete"></div>
+		<!-- Gestion de la persistance browser -->
+		<script src="./js/calculator.persistance.js"></script>
+		<!-- Gestion des invocations -->
+		<script src="./js/calculator.invocations.js"></script>
+		<!-- Modèle de donnée -->
+		<script src="./js/calculator.model.js"></script>
+		<!-- Fonctions utilitaires -->
+		<script src="./js/calculator.util.js"></script>
+		<!-- Intégration Roll20 -->
+		<script src="./js/calculator.roll20.js"></script>
+	</body>
+	
+</html>
+	

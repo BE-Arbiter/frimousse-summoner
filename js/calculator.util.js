@@ -1,3 +1,9 @@
+//Inclusion des modals
+$(document).ready(function() {
+	$("#include_about").load("./html/modals/about.html");
+	$("#include_confirm_delete").load("./html/modals/confirmDelete.html");
+});
+
 //Téléchargement
 function download(blob, filename) {
 	let a = document.createElement("a");
@@ -57,6 +63,21 @@ function getSafeNumber(val){
 		return 0;
 	}
 	return val;
+}
+//Récupération d'un fichier Externe
+function getHtmlFromFile(filename){
+	var html;
+	$.ajax({
+		dataType: "html",
+		crossDomain: true,
+		async: false,
+		method: 'get',
+		url: filename,
+		success: function(data){
+			html = data;
+		}
+	});
+	return html;
 }
 
 //Gestion de l'output

@@ -14,7 +14,7 @@ Celle-ci sert à gérer les invocations de mon personnage "Frimousse l'invocateu
 
 ## Instructions
 Clic et regarde ce que ça fait... humm....bon...
-L'application est composé d'une listre d'invocations (Initialement vide) et des boutons "Ajouter", "Charger" et "Synchroniser".
+L'application est composé d'une listre d'invocations (Initialement vide) et des boutons "Ajouter", "Charger" et "Synchroniser".
 Le bouton "Ajouter" Crée une nouvelle invocation. Le bouton charger permet de charger un fichier JSON contenant une invocation préalablement sauvegardée sur disque. Le bouton synchroniser sauvegarde l'état actuel de la liste dans la mémoire du navigateur et celle-ci sera chargée lors du prochain démarrage de l'application.
 Pour sélectionner une invocation il suffit de cliquer sur son nom.
 
@@ -49,6 +49,6 @@ Le bloc de données de buffs me permet de sélectionner les buffs à appliquer a
 * La capacité de l'anneau de "Mighty Summon"
 * Un bonus Bardique au touché et aux dégats
 * Un bonus Bardique de dégats de feux (XD6)
-* Un bouton pour initier le calcul 
+* Un bouton pour initier le calcul
 
 Le bloc de résultats afficheras les données de l'invocation une fois les buffs appliqués. Il est important de noter la présence de boutons à cotés des attaques. Qui permettent de copier dans le presse papier un template roll20 de celle-ci.
